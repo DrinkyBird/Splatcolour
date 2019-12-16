@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SplatColour.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastSavePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastColourAlpha" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">207, 88, 28</Value>
+    </Setting>
+    <Setting Name="LastColourBravo" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">20, 20, 148</Value>
+    </Setting>
+    <Setting Name="LastColourNeutral" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Yellow</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
