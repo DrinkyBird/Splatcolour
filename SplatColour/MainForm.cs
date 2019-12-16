@@ -207,10 +207,10 @@ namespace SplatColour
                 {
                     List<string> line = lines[i];
                     string key = line[0];
-                    double rd = Double.Parse(line[1]);
-                    double gd = Double.Parse(line[2]);
-                    double bd = Double.Parse(line[3]);
-                    double ad = Double.Parse(line[4]);
+                    double rd = ClampColour(double.Parse(line[1]));
+                    double gd = ClampColour(double.Parse(line[2]));
+                    double bd = ClampColour(double.Parse(line[3]));
+                    double ad = ClampColour(double.Parse(line[4]));
 
                     int r = (int)(rd * 255.0);
                     int g = (int)(gd * 255.0);
@@ -247,6 +247,13 @@ namespace SplatColour
                     GenerateCode();
                 }
             }
+        }
+
+        private double ClampColour(double v)
+        {
+            if (v < 0.0) v = 0.0;
+            if (v > 1.0) v = 1.0;
+            return v;
         }
     }
 }
