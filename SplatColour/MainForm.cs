@@ -62,7 +62,7 @@ namespace SplatColour
             code += "\t}\r\n";
             code += "\t{\r\n";
             code += "\t\t\"mTeamNeutralColor\"\r\n";
-            code += "\t\t" + GenerateColourParams(btnBravoColour.BackColor) + "\r\n";
+            code += "\t\t" + GenerateColourParams(btnNeutralColour.BackColor) + "\r\n";
             code += "\t}\r\n";
             code += "}\r\n";
 

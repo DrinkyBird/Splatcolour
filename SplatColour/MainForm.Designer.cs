@@ -41,6 +41,7 @@
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
             this.btnOpen = new System.Windows.Forms.Button();
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // colourDialog
@@ -106,7 +107,7 @@
             // 
             this.tbCode.BackColor = System.Drawing.Color.White;
             this.tbCode.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCode.Location = new System.Drawing.Point(15, 106);
+            this.tbCode.Location = new System.Drawing.Point(13, 129);
             this.tbCode.Multiline = true;
             this.tbCode.Name = "tbCode";
             this.tbCode.ReadOnly = true;
@@ -115,7 +116,7 @@
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(331, 350);
+            this.btnCopy.Location = new System.Drawing.Point(329, 373);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 23);
             this.btnCopy.TabIndex = 7;
@@ -125,7 +126,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(413, 350);
+            this.btnSave.Location = new System.Drawing.Point(411, 373);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 8;
@@ -141,7 +142,7 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(15, 350);
+            this.btnOpen.Location = new System.Drawing.Point(13, 373);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
             this.btnOpen.TabIndex = 9;
@@ -155,11 +156,21 @@
             this.openDialog.Filter = "Parameter files|*.params";
             this.openDialog.Title = "Open ink colour parameters";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Generated .params file:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 383);
+            this.ClientSize = new System.Drawing.Size(498, 405);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCopy);
@@ -196,6 +207,7 @@
         private System.Windows.Forms.SaveFileDialog saveDialog;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.OpenFileDialog openDialog;
+        private System.Windows.Forms.Label label4;
     }
 }
 
