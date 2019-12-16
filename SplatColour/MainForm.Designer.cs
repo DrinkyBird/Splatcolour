@@ -39,6 +39,8 @@
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.openDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // colourDialog
@@ -135,12 +137,30 @@
             // 
             this.saveDialog.DefaultExt = "params";
             this.saveDialog.Filter = "Parameter files|*.params";
+            this.saveDialog.Title = "Save ink colour parameters";
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(15, 350);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 9;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // openDialog
+            // 
+            this.openDialog.FileName = "openFileDialog1";
+            this.openDialog.Filter = "Parameter files|*.params";
+            this.openDialog.Title = "Open ink colour parameters";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 383);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.tbCode);
@@ -154,7 +174,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Colour editor";
+            this.Text = "Splatoon ink colour editor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,6 +194,8 @@
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.SaveFileDialog saveDialog;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.OpenFileDialog openDialog;
     }
 }
 

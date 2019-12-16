@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -133,6 +134,119 @@ namespace SplatColour
         private void DisableUi()
         {
             SetUiEnabled(false);
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            openDialog.FileName = Settings.Default.LastSavePath;
+            DialogResult result = openDialog.ShowDialog(this);
+
+            if (result == DialogResult.OK)
+            {
+                string path = openDialog.FileName;
+
+                Console.WriteLine($"parsing {path}");
+
+                Settings.Default.LastSavePath = path;
+                Settings.Default.Save();
+
+                string text = File.ReadAllText(path);
+                
+                List<List<string>> lines = new List<List<string>>();
+
+                // crappy parsing code
+                {
+                    uint bracketLevel = 0;
+                    bool inQuotes = false;
+                    string buffer = "";
+                    List<string> keys = new List<String>();
+
+                    for (int i = 0; i < text.Length; i++)
+                    {
+                        char c = text[i];
+
+                        if (c == '\r' || c == '\n')
+                        {
+                            continue;
+                        }
+
+                        if (c == '{')
+                        {
+                            bracketLevel++;
+                        }
+                        else if (c == '}')
+                        {
+                            bracketLevel--;
+
+                            if (bracketLevel == 1 && keys.Count >= 1)
+                            {
+                                lines.Add(new List<string>(keys));
+                                keys.Clear();
+                            }
+                        }
+                        else if (c == '"')
+                        {
+                            inQuotes = !inQuotes;
+                        }
+                        else if (c == ' ' || c == '\t')
+                        {
+                            if (buffer.Trim().Length >= 1)
+                            {
+                                keys.Add(buffer);
+                                buffer = "";
+                            }
+                        }
+                        else
+                        {
+                            buffer += c;
+                        }
+                    }
+                }
+
+                for (int i = 0; i < lines.Count; i++)
+                {
+                    List<string> line = lines[i];
+                    string key = line[0];
+                    double rd = Double.Parse(line[1]);
+                    double gd = Double.Parse(line[2]);
+                    double bd = Double.Parse(line[3]);
+                    double ad = Double.Parse(line[4]);
+
+                    int r = (int)(rd * 255.0);
+                    int g = (int)(gd * 255.0);
+                    int b = (int)(bd * 255.0);
+                    int a = (int)(ad * 255.0);
+
+                    Color col = Color.FromArgb(a, r, g, b);
+
+                    switch (key)
+                    {
+                        case "mTeamAColor":
+                        {
+                            btnAlphaColour.BackColor = col;
+                            break;
+                        }
+
+                        case "mTeamBColor":
+                        {
+                            btnBravoColour.BackColor = col;
+                            break;
+                        }
+
+                        case "mTeamNeutralColor":
+                        {
+                            btnNeutralColour.BackColor = col;
+                            break;
+                        }
+                    }
+
+                    Settings.Default.LastColourAlpha = btnAlphaColour.BackColor;
+                    Settings.Default.LastColourBravo = btnBravoColour.BackColor;
+                    Settings.Default.LastColourNeutral = btnNeutralColour.BackColor;
+                    Settings.Default.Save();
+                    GenerateCode();
+                }
+            }
         }
     }
 }
