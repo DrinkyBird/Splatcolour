@@ -47,11 +47,11 @@
             this.lvColumnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
-            this.menuSetParamsDir = new System.Windows.Forms.MenuItem();
-            this.menuSave = new System.Windows.Forms.MenuItem();
             this.menuLoad = new System.Windows.Forms.MenuItem();
+            this.menuSave = new System.Windows.Forms.MenuItem();
             this.menuCopy = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuSetParamsDir = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.menuAbout = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
@@ -202,23 +202,17 @@
             this.menuCopy});
             this.menuItem1.Text = "File";
             // 
-            // menuSetParamsDir
+            // menuLoad
             // 
-            this.menuSetParamsDir.Index = 0;
-            this.menuSetParamsDir.Text = "Set Params directory";
-            this.menuSetParamsDir.Click += new System.EventHandler(this.menuSetParamsDir_Click);
+            this.menuLoad.Index = 0;
+            this.menuLoad.Text = "Open";
+            this.menuLoad.Click += new System.EventHandler(this.menuLoad_Click);
             // 
             // menuSave
             // 
             this.menuSave.Index = 1;
             this.menuSave.Text = "Save As";
             this.menuSave.Click += new System.EventHandler(this.menuSave_Click);
-            // 
-            // menuLoad
-            // 
-            this.menuLoad.Index = 0;
-            this.menuLoad.Text = "Open";
-            this.menuLoad.Click += new System.EventHandler(this.menuLoad_Click);
             // 
             // menuCopy
             // 
@@ -232,6 +226,12 @@
             this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuSetParamsDir});
             this.menuItem2.Text = "Options";
+            // 
+            // menuSetParamsDir
+            // 
+            this.menuSetParamsDir.Index = 0;
+            this.menuSetParamsDir.Text = "Set Parameter directory";
+            this.menuSetParamsDir.Click += new System.EventHandler(this.menuSetParamsDir_Click);
             // 
             // menuItem3
             // 

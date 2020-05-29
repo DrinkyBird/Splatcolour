@@ -358,7 +358,7 @@ namespace SplatColour
             if (string.IsNullOrEmpty(Settings.Default.LastParamsDir))
             {
                 MessageBox.Show(
-                    "You haven't specified a Params/ directory!\nUse Options > Set Params dir to specify where your .params files are located.",
+                    "You haven't specified a Parameter/ directory!\nUse Options > Set Params dir to specify where your .params files are located.",
                     "SplatColour", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
