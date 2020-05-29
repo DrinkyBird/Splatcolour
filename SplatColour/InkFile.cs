@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace SplatColour
 {
@@ -64,25 +60,21 @@ namespace SplatColour
             new InkFile("GfxSetting_Vss_Regular_TurquoiseOrange.params", "TurquoiseOrange", InkGroup.Regular),
         };
 
-        private static uint nextId = 0;
-
-        public string FileName { get; private set; }
-        public string Name { get; private set; }
-        public InkGroup Group { get; private set; }
-        public uint Id { get; private set; }
+        public string FileName { get; }
+        public string Name { get; }
+        public InkGroup Group { get; }
 
         public InkFile(string fileName, string name, InkGroup group)
         {
             this.FileName = fileName;
             this.Name = name;
             this.Group = group;
-            this.Id = nextId++;
         }
     }
 
     public class InkFileListItem : ListViewItem
     {
-        public InkFile File { get; private set; }
+        public InkFile File { get; }
 
         public InkFileListItem(InkFile file) : base(file.Name)
         {

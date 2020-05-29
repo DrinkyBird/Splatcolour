@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Reflection;
 using System.Windows.Forms;
 using SplatColour.Properties;
 
@@ -10,8 +9,8 @@ namespace SplatColour
 {
     public partial class MainForm : Form
     {
-        private string LastOpenedFile = null;
-        private bool OpenedViaList = false;
+        private string LastOpenedFile;
+        private bool OpenedViaList;
 
         public MainForm()
         {
@@ -105,9 +104,9 @@ namespace SplatColour
         {
             string s = "";
 
-            double r = (double) color.R / 255.0;
-            double g = (double) color.G / 255.0;
-            double b = (double) color.B / 255.0;
+            double r = color.R / 255.0;
+            double g = color.G / 255.0;
+            double b = color.B / 255.0;
 
             s += $"{r:0.00000000}";
             s += " ";
@@ -307,11 +306,6 @@ namespace SplatColour
             }
 
             LastOpenedFile = Path.GetFullPath(path);
-        }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            OpenFileViaDialog();
         }
 
         private double ClampColour(double v)
