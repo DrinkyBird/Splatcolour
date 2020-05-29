@@ -14,5 +14,8 @@
     <Setting Name="LastColourNeutral" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Yellow</Value>
     </Setting>
+    <Setting Name="LastParamsDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -70,5 +70,17 @@ namespace SplatColour.Properties {
                 this["LastColourNeutral"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastParamsDir {
+            get {
+                return ((string)(this["LastParamsDir"]));
+            }
+            set {
+                this["LastParamsDir"] = value;
+            }
+        }
     }
 }
