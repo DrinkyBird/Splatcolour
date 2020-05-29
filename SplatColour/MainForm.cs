@@ -321,7 +321,7 @@ namespace SplatColour
             dialog.SelectedPath = Settings.Default.LastParamsDir;
             dialog.Description = "Select your Params/ folder";
 
-            var result = dialog.ShowDialog();
+            var result = dialog.ShowDialog(this);
             if (result == DialogResult.OK)
             {
                 string path = dialog.SelectedPath;
