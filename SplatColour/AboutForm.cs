@@ -22,7 +22,7 @@ namespace SplatColour
         {
             var info = new ProcessStartInfo
             {
-                FileName = "https://csnxs.uk",
+                FileName = "https://drinkybird.net",
                 UseShellExecute = true
             };
 

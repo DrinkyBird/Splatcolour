@@ -62,19 +62,19 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(100, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 15);
+            this.label1.Size = new System.Drawing.Size(122, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Created by NotTheActualSean";
+            this.label1.Text = "Created by DrinkyBird";
             // 
             // websiteLink
             // 
             this.websiteLink.AutoSize = true;
             this.websiteLink.Location = new System.Drawing.Point(100, 69);
             this.websiteLink.Name = "websiteLink";
-            this.websiteLink.Size = new System.Drawing.Size(52, 15);
+            this.websiteLink.Size = new System.Drawing.Size(81, 15);
             this.websiteLink.TabIndex = 3;
             this.websiteLink.TabStop = true;
-            this.websiteLink.Text = "csnxs.uk";
+            this.websiteLink.Text = "drinkybird.net";
             this.websiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.websiteLink_LinkClicked);
             // 
             // btnClose
