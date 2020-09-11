@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SplatColour")]
 [assembly: AssemblyDescription("Splatoon 1 ink colour editor")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NotTheActualSean")]
+[assembly: AssemblyCompany("DrinkyBird")]
 [assembly: AssemblyProduct("SplatColour")]
-[assembly: AssemblyCopyright("Copyright © NotTheActualSean 2019; Splatoon is (c) 2015 Nintendo")]
+[assembly: AssemblyCopyright("Copyright © DrinkyBird 2019-2020; Splatoon is (c) 2015 Nintendo")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
